@@ -1,7 +1,26 @@
 <p>movie works!</p>
 
-<div *ngFor="let result of res">
-    <h2>{{ result.name }}</h2>
-    <p>Email: {{ result.email }}</p>
-    <hr />
-  </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <h2 class="text-center h4">Data</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <th>page</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Release date</th>
+            </thead>
+
+            <tbody>
+               <tr *ngFor="let result of resmovie">
+                <td>{{result.page}}</td>
+                <td>{{result.results.id}}</td>
+                <td>{{result.results.original_title}}</td>
+                <td>{{result.results.poster_path}}</td>
+                <td>{{result.results.release_date}}</td>
+               </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

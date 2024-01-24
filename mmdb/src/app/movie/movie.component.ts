@@ -9,6 +9,7 @@ import { MovieserService } from 'src/services/movieser.service';
 export class MovieComponent {
 
   // responseResult:any;
+  resmovie:any;
   constructor(private _service:MovieserService){}
 
   ngOninit(){
@@ -18,7 +19,7 @@ export class MovieComponent {
 
   getmovie(){
     return this._service.getmovie().subscribe(res => {
-     
+      this.resmovie =res;
       console.log('Movies :',res);
     })
   }
