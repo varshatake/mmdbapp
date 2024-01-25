@@ -1,33 +1,44 @@
-<p>mdetail works!</p>
-
-<div *ngFor="let details of movieresult">
-    <div><img
-        style="height: 100px; width: 100px"
-        src="https://www.themoviedb.org/t/p/w1280{{ details.poster_path }}"/></div>
-
-     <div>
-        <div>
-            <h2>{{details.title}}</h2>
-            <p>{{details.release_date}} | |</p>
-            <div>
-                <p>{{details.overview}}</p>
-            </div>
-            
-            <div>
-                <p>Other Details:</p>
-                <p>Languages : </p>
-                <span>{{details.original_language}}</span>
-                <p>Budget:</p>
-                <span></span>
-                <p>Revenue :</p>
-                <span></span>
-            </div>
-            
-
-        </div>
-     </div>
-
-     <div>
-        <a [routerLink]="['/mdetail']" class="btn btn-light">Go back to Movie</a>
-     </div>
+<div style="width: 1000px; margin-left: 10%; margin-top: 5%">
+  <div style="float: left">
+    <img
+      style="height: 500px; width: 300px"
+      src="https://www.themoviedb.org/t/p/w1280{{ movieresult.poster_path }}"
+    />
+    <div>
+        <a routerLinkActive="active" routerLink="/movie"
+          ><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back to Movie List</a
+        >
+      </div>
+  </div>
+  <div style="margin-left: 10px !important">
+    <div>
+      <h2>{{ movieresult.title }}</h2>
+      <p>{{ movieresult.release_date }} | |</p>
+      <div>
+        <p>{{ movieresult.overview }}</p>
+      </div>
+      <p>Other Details:</p>
+      <table>
+        <tr>
+          <td>Languages:</td>
+          <td>
+            <span>{{ movieresult.original_language }}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Budget:</td>
+          <td>
+            <span>{{ movieresult.budget }}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Revenue:</td>
+          <td>
+            <span>{{ movieresult.revenue }}</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
+

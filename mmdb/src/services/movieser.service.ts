@@ -29,7 +29,7 @@ export class MovieserService {
     );
   }
 
-  getmovieDetails(title:any): Observable<any> {
-    return this._http.get(`https://api.themoviedb.org/3/movie/$%7B`+title+`%7D?api_key=5c06fed2cdf4dfcdab132d9e67c1c2e7&language=en-US`,title);
+  getmovieDetails(movieId:any): Observable<any> {
+    return this._http.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=5c06fed2cdf4dfcdab132d9e67c1c2e7&language=en-US`);
   }
 }
