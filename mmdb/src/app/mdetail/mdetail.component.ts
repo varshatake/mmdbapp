@@ -25,7 +25,7 @@ export class MdetailComponent implements OnInit{
   }
 
   ontitleclick(){
-    let title = this.route.snapshot.params[''];
+    let title = this.route.snapshot.params['title'];
     this._service.getmovieDetails(title).subscribe((res:any) => {
       console.log('post deatils', res);
     });
