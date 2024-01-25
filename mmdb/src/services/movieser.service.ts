@@ -6,6 +6,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class MovieserService {
+  getpostByName(title: any) {
+    throw new Error('Method not implemented.');
+  }
   apiurl =
     'https://api.themoviedb.org/3/discover/movie?api_key=5c06fed2cdf4dfcdab132d9e67c1c2e7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate';
 
@@ -26,7 +29,7 @@ export class MovieserService {
     );
   }
 
-  getmovieDetails(movieName:any): Observable<any> {
-    return this._http.get('https://api.themoviedb.org/3/movie/$%7B'+movieName+'%7D?api_key=5c06fed2cdf4dfcdab132d9e67c1c2e7&language=en-US');
+  getmovieDetails(title:any): Observable<any> {
+    return this._http.get(`${this.moviedetailsurl}`,title);
   }
 }

@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { MovieComponent } from './movie/movie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MoviedetailsComponent } from './movie/moviedetails/moviedetails.component';
+import { MdetailComponent } from './mdetail/mdetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieComponent
+    MovieComponent,
+    MoviedetailsComponent,
+    MdetailComponent
   ],
   imports: [
     BrowserModule,

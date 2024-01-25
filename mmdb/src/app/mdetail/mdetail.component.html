@@ -1,0 +1,18 @@
+<p>mdetail works!</p>
+
+<div *ngFor="let details of movieresult">
+    <div><img
+        style="height: 100px; width: 100px"
+        src="https://www.themoviedb.org/t/p/w1280{{ details.poster_path }}"/></div>
+
+     <div>
+        <div>
+            <h2>{{details.title}}</h2>
+            <p></p>
+        </div>
+     </div>
+
+     <div>
+        <a [routerLink]="['/mdetail']" class="btn btn-light">Go back to Movie</a>
+     </div>
+</div>

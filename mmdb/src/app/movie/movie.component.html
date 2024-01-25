@@ -37,6 +37,7 @@
           <td>
             <a (click)="getMovieDetails(result.title)">{{ result.title }}</a>
           </td>
+          <td><a [routerLink]="['/mdetail', result.title]">{{result.title}}</a></td>
           <td>
             <img
               style="height: 100px; width: 100px"
@@ -48,4 +49,5 @@
       </tbody>
     </table>
   </div>
+
 </div>

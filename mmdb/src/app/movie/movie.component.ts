@@ -59,5 +59,5 @@ export class MovieComponent implements OnInit {
     });
   }
 
-  onsearch() {}
+ 
 }
